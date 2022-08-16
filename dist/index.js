@@ -16,3 +16,23 @@ employee = [
     [1, "Pete"],
     [2, "John"]
 ];
+//Union
+let pid; //----------- Can be one of the two types
+pid = 22;
+pid = '22';
+//Enums
+var Direction1;
+(function (Direction1) {
+    Direction1[Direction1["Up"] = 5] = "Up";
+    Direction1[Direction1["Down"] = 6] = "Down";
+    Direction1[Direction1["Left"] = 7] = "Left";
+    Direction1[Direction1["Right"] = 8] = "Right";
+})(Direction1 || (Direction1 = {}));
+var Direction2;
+(function (Direction2) {
+    Direction2["Up"] = "Juu";
+    Direction2["Down"] = "chini";
+    Direction2["Left"] = "Kono";
+    Direction2["Right"] = " Dyo";
+})(Direction2 || (Direction2 = {}));
+console.log(Direction1.Up, Direction2.Left);
