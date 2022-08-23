@@ -145,3 +145,20 @@ class Employee extends Person {
 
 const emp = new Employee(2, 'Jennifer', 'CEO')
 console.log(emp.register());
+
+//GENERICS
+//---- Used to define generic components that can be reused
+console.log("_________________________________\n\n\nGENERICS");
+
+function getArray<T>(items: T[]): T[] {
+  return new Array().concat(items)
+}
+
+let numArr = getArray<number>([1, 2, 3]);
+let strArr = getArray<string>(['Pie', 'Fries', 'Peas'])
+
+console.log(numArr = numArr.concat(4));
+console.log(strArr = strArr.concat('Emmanuel'));
+
+
+
