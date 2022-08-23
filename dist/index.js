@@ -66,3 +66,30 @@ const user1 = {
 const add = (x, y) => x + y;
 const sub = (x, y) => x - y;
 console.log(add(4, 3) + sub(8, 2));
+console.log("_________________________________\n\n\nCLASSES");
+class Person {
+    constructor(id_passedIn, name_passedIn) {
+        this.id = id_passedIn;
+        this.name = name_passedIn;
+    }
+    register() {
+        return `${this.name} is now Registered`;
+    }
+}
+const brad = new Person(4, "Colin Mcrae");
+const jane = new Person(3, "Jane Doe");
+console.log(brad.register());
+//Access Modifiers
+//---- Public Leaves it open
+//---- Private means that class property can be accessed or modified within the class.
+//---- Protected means the class property can be accessed even by other classes that extend that particular class.
+//Class Inheritance
+//Employee is a subclass
+class Employee extends Person {
+    constructor(id, name, position_passedIn) {
+        super(id, name);
+        this.position = position_passedIn;
+    }
+}
+const emp = new Employee(2, 'Jennifer', 'CEO');
+console.log(emp.register());

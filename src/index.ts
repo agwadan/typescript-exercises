@@ -99,3 +99,49 @@ const add: MathFunc = (x: number, y: number): number => x + y;
 const sub: MathFunc = (x: number, y: number): number => x - y;
 
 console.log(add(4, 3) + sub(8, 2));
+
+
+//Classes
+interface PersonInterface {
+  id: number,
+  name: String,
+  register(): String
+}
+
+console.log("_________________________________\n\n\nCLASSES");
+class Person implements PersonInterface {
+  id: number
+  name: string
+  constructor(id_passedIn: number, name_passedIn: string) { //--------- The constructor is a run everytime an instance/object is created from the class
+    this.id = id_passedIn
+    this.name = name_passedIn
+  }
+
+  register() {
+    return `${this.name} is now Registered`
+  }
+}
+
+const brad = new Person(4, "Colin Mcrae");
+const jane = new Person(3, "Jane Doe")
+console.log(brad.register());
+
+//Access Modifiers
+//---- Public Leaves it open
+//---- Private means that class property can be accessed or modified within the class.
+//---- Protected means the class property can be accessed even by other classes that extend that particular class.
+
+//Class Inheritance
+
+//Employee is a subclass
+class Employee extends Person {
+  position: string
+
+  constructor(id: number, name: string, position_passedIn: string) {
+    super(id, name)
+    this.position = position_passedIn
+  }
+}
+
+const emp = new Employee(2, 'Jennifer', 'CEO')
+console.log(emp.register());
