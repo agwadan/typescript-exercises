@@ -46,4 +46,23 @@ let cid = 1;
 const CustomerId = cid;
 //Method 2
 const clientId = cid;
-console.log(Direction1.Up, Direction2.Left);
+//Functions
+const AddNum = (x, y) => {
+    return x - y;
+};
+console.log(AddNum(10, 3));
+//Void Functions
+const Log = (message) => {
+    console.log(message);
+};
+Log('Pete');
+Log(3);
+console.log("_________________________________\n\n\nINTERFACES");
+const user1 = {
+    id: 1,
+    name: "James",
+    age: 43
+};
+const add = (x, y) => x + y;
+const sub = (x, y) => x - y;
+console.log(add(4, 3) + sub(8, 2));
