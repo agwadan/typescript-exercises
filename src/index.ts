@@ -52,4 +52,15 @@ const user: User = {
   name: 'Pete'
 }
 
+//Type Assertion
+//-------- Changing the original type of a variable to be used somewhere else
+let cid: any = 1;
+
+//Method 1
+const CustomerId = <number>cid;
+
+//Method 2
+const clientId = cid as number
+
+
 console.log(Direction1.Up, Direction2.Left);

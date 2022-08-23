@@ -35,4 +35,15 @@ var Direction2;
     Direction2["Left"] = "Kono";
     Direction2["Right"] = " Dyo";
 })(Direction2 || (Direction2 = {}));
+const user = {
+    id: 1,
+    name: 'Pete'
+};
+//Type Assertion
+//-------- Changing the original type of a variable to be used somewhere else
+let cid = 1;
+//Method 1
+const CustomerId = cid;
+//Method 2
+const clientId = cid;
 console.log(Direction1.Up, Direction2.Left);
