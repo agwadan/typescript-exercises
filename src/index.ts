@@ -40,4 +40,16 @@ enum Direction2 {//------------------- Enumerated values numbered from 0 ff by d
   Right = " Dyo"
 }
 
+
+//Objects
+type User = {
+  id: number,
+  name: String
+}
+
+const user: User = {
+  id: 1,
+  name: 'Pete'
+}
+
 console.log(Direction1.Up, Direction2.Left);
